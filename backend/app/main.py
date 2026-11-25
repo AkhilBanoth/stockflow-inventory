@@ -18,11 +18,12 @@ app = FastAPI(
 )
 
 
-# Frontend connection
+# Frontend connection - Local and Production
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173"
+        "http://localhost:5173",
+        "https://frontend-blond-ten-80.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
